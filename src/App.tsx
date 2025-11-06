@@ -13,6 +13,11 @@ import Audit from "./pages/Audit";
 import Competitors from "./pages/Competitors";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
+import LocalSEO from "./pages/LocalSEO";
+import BrandMonitoring from "./pages/BrandMonitoring";
+import ContentOptimizer from "./pages/ContentOptimizer";
+import YouTubeSEO from "./pages/YouTubeSEO";
+import Integrations from "./pages/Integrations";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +39,11 @@ const App = () => (
           <Route path="/competitors" element={<Competitors />} />
           <Route path="/reports" element={<Reports />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/local-seo" element={<LocalSEO />} />
+          <Route path="/brand-monitoring" element={<BrandMonitoring />} />
+          <Route path="/content-optimizer" element={<ContentOptimizer />} />
+          <Route path="/youtube-seo" element={<YouTubeSEO />} />
+          <Route path="/integrations" element={<Integrations />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -6,7 +6,12 @@ import {
   Layers, 
   FileSearch, 
   Target, 
-  Zap 
+  Zap,
+  MapPin,
+  Bell,
+  FileText,
+  Youtube,
+  Plug
 } from "lucide-react";
 
 interface LayoutProps {
@@ -19,6 +24,11 @@ const navigation = [
   { name: "AEO Hub", href: "/aeo", icon: Zap },
   { name: "Auditoría", href: "/audit", icon: FileSearch },
   { name: "Competidores", href: "/competitors", icon: Target },
+  { name: "SEO Local", href: "/local-seo", icon: MapPin },
+  { name: "Menciones", href: "/brand-monitoring", icon: Bell },
+  { name: "Optimizador", href: "/content-optimizer", icon: FileText },
+  { name: "YouTube", href: "/youtube-seo", icon: Youtube },
+  { name: "Integraciones", href: "/integrations", icon: Plug },
 ];
 
 export const Layout = ({ children }: LayoutProps) => {
