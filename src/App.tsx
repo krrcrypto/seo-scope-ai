@@ -11,6 +11,8 @@ import AIKeywords from "./pages/AIKeywords";
 import AIEngines from "./pages/AIEngines";
 import AICompetitors from "./pages/AICompetitors";
 import AIContentOptimizer from "./pages/AIContentOptimizer";
+import AIBrandMonitor from "./pages/AIBrandMonitor";
+import SERPAISummary from "./pages/SERPAISummary";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
 import Integrations from "./pages/Integrations";
@@ -33,6 +35,8 @@ const App = () => (
             <Route path="/ai-engines" element={<AIEngines />} />
             <Route path="/ai-competitors" element={<AICompetitors />} />
             <Route path="/content-optimizer" element={<AIContentOptimizer />} />
+            <Route path="/brand-monitor" element={<AIBrandMonitor />} />
+            <Route path="/serp-ai-summary" element={<SERPAISummary />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/integrations" element={<Integrations />} />

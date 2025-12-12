@@ -14,7 +14,9 @@ import {
   BarChart3,
   Plug,
   Settings,
-  Zap
+  Zap,
+  Shield,
+  Sparkles
 } from "lucide-react";
 
 interface LayoutProps {
@@ -33,6 +35,8 @@ export const Layout = ({ children }: LayoutProps) => {
     { name: t.nav.aiEngines, href: "/ai-engines", icon: Bot },
     { name: t.nav.aiCompetitors, href: "/ai-competitors", icon: Swords },
     { name: t.nav.contentOptimizer, href: "/content-optimizer", icon: FileText },
+    { name: t.nav.aiBrandMonitor, href: "/brand-monitor", icon: Shield },
+    { name: t.nav.serpAISummary, href: "/serp-ai-summary", icon: Sparkles },
     { name: t.nav.reports, href: "/reports", icon: BarChart3 },
     { name: t.nav.integrations, href: "/integrations", icon: Plug },
     { name: t.nav.settings, href: "/settings", icon: Settings },
