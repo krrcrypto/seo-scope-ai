@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { LanguageSelector } from "@/components/LanguageSelector";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { ProjectSelector } from "@/components/ProjectSelector";
 import { 
   LayoutDashboard, 
   Layers, 
@@ -59,8 +61,16 @@ export const Layout = ({ children }: LayoutProps) => {
                   <p className="text-xs text-muted-foreground">AEO Platform</p>
                 </div>
               </div>
-              <LanguageSelector />
+              <div className="flex items-center gap-1">
+                <ThemeToggle />
+                <LanguageSelector />
+              </div>
             </div>
+
+            <div className="px-4 py-3 border-b border-border">
+              <ProjectSelector />
+            </div>
+
             <nav className="flex-1 space-y-1 p-4 overflow-y-auto">
               {navigation.map((item) => {
                 const isActive = location.pathname === item.href;
