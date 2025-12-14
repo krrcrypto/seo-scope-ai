@@ -2,9 +2,8 @@ import { ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { LanguageSelector } from "@/components/LanguageSelector";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { ProjectSelector } from "@/components/ProjectSelector";
+import { UserMenu } from "@/components/UserMenu";
 import { 
   LayoutDashboard, 
   Layers, 
@@ -49,7 +48,7 @@ export const Layout = ({ children }: LayoutProps) => {
       <div className="flex">
         <aside className="fixed left-0 top-0 z-40 h-screen w-64 border-r border-border bg-card">
           <div className="flex h-full flex-col">
-            <div className="flex h-16 items-center justify-between border-b border-border px-4">
+            <div className="flex h-16 items-center border-b border-border px-4">
               <div className="flex items-center gap-2">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
                   <Zap className="h-6 w-6 text-primary-foreground" />
@@ -60,10 +59,6 @@ export const Layout = ({ children }: LayoutProps) => {
                   </h1>
                   <p className="text-xs text-muted-foreground">AEO Platform</p>
                 </div>
-              </div>
-              <div className="flex items-center gap-1">
-                <ThemeToggle />
-                <LanguageSelector />
               </div>
             </div>
 
@@ -91,14 +86,9 @@ export const Layout = ({ children }: LayoutProps) => {
                 );
               })}
             </nav>
+            
             <div className="border-t border-border p-4">
-              <div className="rounded-lg bg-muted p-3">
-                <p className="text-xs font-medium text-foreground">{t.footer.apiStatus}</p>
-                <div className="mt-1 flex items-center gap-2">
-                  <div className="h-2 w-2 rounded-full bg-success animate-pulse" />
-                  <span className="text-xs text-muted-foreground">{t.footer.connected}</span>
-                </div>
-              </div>
+              <UserMenu />
             </div>
           </div>
         </aside>
